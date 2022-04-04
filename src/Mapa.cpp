@@ -27,7 +27,6 @@ void Mapa::checkForKeyPressed()
             nazwa_mapy = "ulica.png";
             break;
         }
-        init_sprite(nazwa_mapy);
-        std::cout<<"costam";
+        load_sprite(nazwa_mapy);
     }
 }

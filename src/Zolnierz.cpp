@@ -1,12 +1,14 @@
 #include "Zolnierz.h"
 #include <Stale.h>
+#include <iostream>
 
 
-Zolnierz::Zolnierz(int x, int y)  : RysowalnyObiekt("zolnierz.png")
+Zolnierz::Zolnierz(std::string filename,int x, int y)  : RysowalnyObiekt(filename)
 {
     kierunek = true;
     poprzedniKierunek = false;
     ruszylSie = true;
+    bacznosc = true;
     sprite.setPosition(sprite.getPosition().x + texture.getSize().x - WALKSPEED + x,sprite.getPosition().y + y);
 }
 
@@ -60,5 +62,9 @@ void Zolnierz::checkForKeyPressed()
     {
         ruszylSie = true;
         kierunek = true;
+    }
+    if (sf::Keyboard::isKeyPressed(sf::Keyboard::V))
+    {
+        bacznosc = !bacznosc;
     }
 }

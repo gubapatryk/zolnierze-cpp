@@ -5,10 +5,10 @@
 
 RysowalnyObiekt::RysowalnyObiekt(std::string image_filename)
 {
-    init_sprite(image_filename);
+    load_sprite(image_filename);
 }
 
-void RysowalnyObiekt::init_sprite(std::string image_filename)
+void RysowalnyObiekt::load_sprite(std::string image_filename)
 {
         if (!texture.loadFromFile(ASSETS_FILEPATH + image_filename))
     {
@@ -18,7 +18,6 @@ void RysowalnyObiekt::init_sprite(std::string image_filename)
     else
     {
         sprite.setTexture(texture);
-        std::cout << "jooo" + image_filename;
 
     }
 }

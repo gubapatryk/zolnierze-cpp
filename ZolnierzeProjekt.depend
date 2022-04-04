@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1649096954 source:c:\users\orange\desktop\zolnierzeprojekt\main.cpp
+1649108566 source:c:\users\orange\desktop\zolnierzeprojekt\main.cpp
 	<iostream>
 	<RysowalnyObiekt.h>
 	<Zolnierz.h>
@@ -7,6 +7,10 @@
 	<SFML/Window/Event.hpp>
 	<vector>
 	<Mapa.h>
+	<Szeregowy.h>
+	<stdlib.h>
+	<time.h>
+	<vector>
 
 1648833292 c:\sfml\sfml-2.5.1\include\sfml\graphics.hpp
 	<SFML/Window.hpp>
@@ -417,21 +421,22 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1649097146 source:c:\users\orange\desktop\zolnierzeprojekt\src\rysowalnyobiekt.cpp
+1649103872 source:c:\users\orange\desktop\zolnierzeprojekt\src\rysowalnyobiekt.cpp
 	"RysowalnyObiekt.h"
 	<iostream>
 	<SFML/Window/Event.hpp>
 	<Stale.h>
 
-1649096796 c:\users\orange\desktop\zolnierzeprojekt\include\rysowalnyobiekt.h
+1649106712 c:\users\orange\desktop\zolnierzeprojekt\include\rysowalnyobiekt.h
 	<SFML/Graphics.hpp>
 	<SFML/Window/Event.hpp>
 
-1649096257 source:c:\users\orange\desktop\zolnierzeprojekt\src\zolnierz.cpp
+1649103877 source:c:\users\orange\desktop\zolnierzeprojekt\src\zolnierz.cpp
 	"Zolnierz.h"
 	<Stale.h>
+	<iostream>
 
-1649095192 c:\users\orange\desktop\zolnierzeprojekt\include\zolnierz.h
+1649106700 c:\users\orange\desktop\zolnierzeprojekt\include\zolnierz.h
 	<RysowalnyObiekt.h>
 
 1649095817 c:\users\orange\desktop\zolnierzeprojekt\include\stale.h
@@ -439,8 +444,14 @@
 1649097193 c:\users\orange\desktop\zolnierzeprojekt\include\mapa.h
 	<RysowalnyObiekt.h>
 
-1649096974 source:c:\users\orange\desktop\zolnierzeprojekt\src\mapa.cpp
+1649098822 source:c:\users\orange\desktop\zolnierzeprojekt\src\mapa.cpp
 	"Mapa.h"
 	<iostream>
 	<Stale.h>
+
+1649106678 c:\users\orange\desktop\zolnierzeprojekt\include\szeregowy.h
+	<Zolnierz.h>
+
+1649103846 source:c:\users\orange\desktop\zolnierzeprojekt\src\szeregowy.cpp
+	"Szeregowy.h"
 

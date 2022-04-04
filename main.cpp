@@ -5,13 +5,35 @@
 #include <SFML/Window/Event.hpp>
 #include <vector>
 #include <Mapa.h>
+#include <Szeregowy.h>
+#include <stdlib.h>
+#include <time.h>
+#include <vector>
+#define N 5
 
 int main()
 {
+
+    std::vector <Zolnierz> armia;
+
+    for (int i = 0; i < N; i++) {
+        armia.push_back(Szeregowy(20+ 20*i, 20));
+    }
+
+    /*
+
+    Szeregowy ob(20,20);
+    armia.push_back(ob);
+    Szeregowy ob1(20,40);
+    armia.push_back(ob1);
+    for (int i =20; i< 100; i+=20)
+    {
+    }
+    */
+    int iSecret = rand() % 3;
+    std::cout<<iSecret;
     Mapa mapa;
-    Zolnierz ob(20,20);
     sf::Event event;
-    sf::Sprite sprite;
 
 
     sf::RenderWindow window(sf::VideoMode(400, 400), "Toy soldier");
@@ -23,10 +45,15 @@ int main()
     {
 
         window.clear();
-        sprite = mapa.get_sprite();
-        window.draw(sprite);
-        sprite = ob.get_sprite();
-        window.draw(sprite);
+        sf::Sprite map_sprite;
+        map_sprite = mapa.get_sprite();
+        window.draw(map_sprite);
+
+        for( size_t i = 0; i < armia.size(); i++ )
+        {
+            armia[i].update_sprite();
+            window.draw(armia[i].get_sprite());
+        }
         window.display();
 
         while (window.pollEvent(event))
@@ -39,8 +66,12 @@ int main()
                 break;
 
             case sf::Event::KeyPressed:
-                std::cout << "Key press event detected\n";
-                ob.checkForKeyPressed();
+                //std::cout << "Key press event detected\n";
+
+                for( size_t i = 0; i < armia.size(); i++ )
+                {
+                    armia[i].checkForKeyPressed();
+                }
                 mapa.checkForKeyPressed();
 
                 break;
@@ -52,6 +83,5 @@ int main()
         }
     }
 
-    std::cout << "\npapa!";
     return 0;
 }
