@@ -4,15 +4,17 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Window/Event.hpp>
 #include <vector>
-
+#include <Mapa.h>
 
 int main()
 {
-    Zolnierz ob("zol1.jpg");
+    Mapa mapa;
+    Zolnierz ob(20,20);
     sf::Event event;
+    sf::Sprite sprite;
 
 
-    sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(400, 400), "Toy soldier");
 
 
 
@@ -21,7 +23,9 @@ int main()
     {
 
         window.clear();
-        sf::Sprite sprite = ob.get_sprite();
+        sprite = mapa.get_sprite();
+        window.draw(sprite);
+        sprite = ob.get_sprite();
         window.draw(sprite);
         window.display();
 
@@ -37,6 +41,7 @@ int main()
             case sf::Event::KeyPressed:
                 std::cout << "Key press event detected\n";
                 ob.checkForKeyPressed();
+                mapa.checkForKeyPressed();
 
                 break;
 

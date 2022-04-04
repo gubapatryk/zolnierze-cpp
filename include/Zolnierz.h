@@ -7,8 +7,7 @@
 class Zolnierz : public RysowalnyObiekt
 {
     public:
-        Zolnierz(std::string image_filename);
-        void init_sprite(std::string image_filename);
+        Zolnierz(int x,int y);
         void checkForKeyPressed();
         sf::Sprite  get_sprite();
 
@@ -16,7 +15,10 @@ class Zolnierz : public RysowalnyObiekt
 
     private:
         void update_sprite();
-        int kierunek;
+        bool kierunek; //1 if right, 0 if left
+        bool poprzedniKierunek;
+        bool ruszylSie;
+        std::string stan;
 };
 
 #endif // ZOLNIERZ_H

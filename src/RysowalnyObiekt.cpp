@@ -10,40 +10,24 @@ RysowalnyObiekt::RysowalnyObiekt(std::string image_filename)
 
 void RysowalnyObiekt::init_sprite(std::string image_filename)
 {
-        if (!texture.loadFromFile(ASSETS_FILEPATH + "cat.jpg"))
+        if (!texture.loadFromFile(ASSETS_FILEPATH + image_filename))
     {
-        std::cout << "blad";
+        std::cout << "Blad wczytywania pliku, czy plik istnieje w folderze assets?";
 
     }
     else
     {
         sprite.setTexture(texture);
-        sprite.setPosition(0,0);
-        //std::cout << texture.getSize()->x;
+        std::cout << "jooo" + image_filename;
 
     }
 }
 
-void RysowalnyObiekt::checkForKeyPressed()
-{
-
-    if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
-    {
-        std::cout << "kliklo";
-    }
-
-}
-
-void RysowalnyObiekt::update_sprite()
-{
-    std::cout << "from inside\n";
-
-}
+void RysowalnyObiekt::update_sprite() {}
 
 sf::Sprite  RysowalnyObiekt::get_sprite()
 {
     update_sprite();
-    std::cout << "updated";
     return sprite;
 
 }

@@ -15,15 +15,15 @@ class RysowalnyObiekt
         unsigned int Getpos_x() { return m_pos_x; }
         void Setpos_x(unsigned int val) { m_pos_x = val; }
         void checkForKeyPressed();
-        void init_sprite(std::string image_filename);
         sf::Sprite get_sprite();
         sf::Texture texture;
         sf::Sprite sprite;
+        void update_sprite();
 
     protected:
+        void init_sprite(std::string image_filename);
 
     private:
-        void update_sprite();
         unsigned int m_pos_y;
         unsigned int m_pos_x;
 };

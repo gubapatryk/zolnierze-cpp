@@ -2,6 +2,6 @@
 #define STALE_H
 
 const std::string ASSETS_FILEPATH = "C:\\SFML\\assets\\";
-const std::string MOTD = "henlo";
+const int WALKSPEED = 5;
 
 #endif // STALE_H

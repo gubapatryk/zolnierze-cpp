@@ -1,46 +1,46 @@
 #include "Zolnierz.h"
 #include <Stale.h>
-#include <iostream>
 
 
-Zolnierz::Zolnierz(std::string image_filename)  : RysowalnyObiekt(image_filename)
+Zolnierz::Zolnierz(int x, int y)  : RysowalnyObiekt("zolnierz.png")
 {
-    init_sprite(image_filename);
-    kierunek = 0;
+    kierunek = true;
+    poprzedniKierunek = false;
+    ruszylSie = true;
+    sprite.setPosition(sprite.getPosition().x + texture.getSize().x - WALKSPEED + x,sprite.getPosition().y + y);
 }
 
 
 void Zolnierz::update_sprite()
 {
-    if (kierunek > 0) {
-        sprite.setScale(kierunek,1);
-        sprite.setPosition(sprite.getPosition().x + 1,sprite.getPosition().y);
-        kierunek--;
-    }
+    if (ruszylSie)
+    {
+        if (kierunek)
+        {
+            if (poprzedniKierunek != kierunek)
+            {
+                sprite.setScale(1,1);
+                poprzedniKierunek = kierunek;
+                sprite.setPosition(sprite.getPosition().x - texture.getSize().x + 1,sprite.getPosition().y);
+            }
+            sprite.setPosition(sprite.getPosition().x + WALKSPEED,sprite.getPosition().y);
+        }
 
-    if (kierunek < 0) {
-        sprite.setScale(kierunek,1);
-        sprite.setPosition(sprite.getPosition().x - 1,sprite.getPosition().y);
-        kierunek++;
+        else
+        {
+            if (poprzedniKierunek != kierunek)
+            {
+                sprite.setScale(-1,1);
+                poprzedniKierunek = kierunek;
+                sprite.setPosition(sprite.getPosition().x + texture.getSize().x + 1,sprite.getPosition().y);
+            }
+            sprite.setPosition(sprite.getPosition().x - WALKSPEED,sprite.getPosition().y);
+        }
+        ruszylSie = false;
+
     }
 }
 
-
-void Zolnierz::init_sprite(std::string image_filename)
-{
-        if (!texture.loadFromFile(ASSETS_FILEPATH + "zol1.jpg"))
-    {
-        std::cout << "blad";
-
-    }
-    else
-    {
-        sprite.setTexture(texture);
-        sprite.setPosition(0,0);
-        //std::cout << texture.getSize()->x;
-
-    }
-}
 
 sf::Sprite  Zolnierz::get_sprite()
 {
@@ -50,14 +50,15 @@ sf::Sprite  Zolnierz::get_sprite()
 
 void Zolnierz::checkForKeyPressed()
 {
-
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
     {
-        kierunek = -1;
+        ruszylSie = true;
+        kierunek = false;
     }
 
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
     {
-        kierunek = 1;
+        ruszylSie = true;
+        kierunek = true;
     }
 }
