@@ -1,5 +1,6 @@
 #include <iostream>
 #include <RysowalnyObiekt.h>
+#include <Zolnierz.h>
 #include <SFML/Graphics.hpp>
 #include <SFML/Window/Event.hpp>
 #include <vector>
@@ -7,31 +8,23 @@
 
 int main()
 {
-    RysowalnyObiekt ob;
+    Zolnierz ob("zol1.jpg");
     sf::Event event;
 
 
-    sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
+    sf::RenderWindow window(sf::VideoMode(400, 400), "SFML works!");
 
 
-    sf::Texture texture;
-    sf::Sprite sprite;
-    std::cout << "kot";
-    if (!texture.loadFromFile("C:\\SFML\\assets\\cat.jpg"))
-    {
-        std::cout << "blad";
-
-    }
-    else
-    {
-        sprite.setTexture(texture);
-        std::cout << "kot";
-
-    }
 
     bool runApplication = true;
     while (runApplication)
     {
+
+        window.clear();
+        sf::Sprite sprite = ob.get_sprite();
+        window.draw(sprite);
+        window.display();
+
         while (window.pollEvent(event))
         {
             switch (event.type)
@@ -42,16 +35,13 @@ int main()
                 break;
 
             case sf::Event::KeyPressed:
-                std::cout << "beep";
+                std::cout << "Key press event detected\n";
                 ob.checkForKeyPressed();
 
                 break;
 
             default:
 
-                window.clear();
-                window.draw(sprite);
-                window.display();
                 break;
             }
         }

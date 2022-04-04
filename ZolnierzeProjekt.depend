@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1648841716 source:c:\users\orange\desktop\zolnierzeprojekt\main.cpp
+1649079199 source:c:\users\orange\desktop\zolnierzeprojekt\main.cpp
 	<iostream>
 	<RysowalnyObiekt.h>
+	<Zolnierz.h>
 	<SFML/Graphics.hpp>
 	<SFML/Window/Event.hpp>
 	<vector>
@@ -415,10 +416,23 @@
 	<SFML/Graphics/Drawable.hpp>
 	<SFML/Window/GlResource.hpp>
 
-1648838903 source:c:\users\orange\desktop\zolnierzeprojekt\src\rysowalnyobiekt.cpp
+1649080250 source:c:\users\orange\desktop\zolnierzeprojekt\src\rysowalnyobiekt.cpp
 	"RysowalnyObiekt.h"
 	<iostream>
 	<SFML/Window/Event.hpp>
+	<Stale.h>
 
-1648838631 c:\users\orange\desktop\zolnierzeprojekt\include\rysowalnyobiekt.h
+1649079421 c:\users\orange\desktop\zolnierzeprojekt\include\rysowalnyobiekt.h
+	<SFML/Graphics.hpp>
+	<SFML/Window/Event.hpp>
+
+1649018435 source:c:\users\orange\desktop\zolnierzeprojekt\src\zolnierz.cpp
+	"Zolnierz.h"
+	<Stale.h>
+	<iostream>
+
+1649081488 c:\users\orange\desktop\zolnierzeprojekt\include\zolnierz.h
+	<RysowalnyObiekt.h>
+
+1648995846 c:\users\orange\desktop\zolnierzeprojekt\include\stale.h
 
