@@ -20,7 +20,6 @@ void Szeregowy::checkForKeyPressed()
     Zolnierz::checkForKeyPressed();
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::B))
     {
-        std::cout<<"h";
         bron = !bron;
         if(bron)
             Szeregowy::prezentujBron();
