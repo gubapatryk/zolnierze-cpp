@@ -14,18 +14,14 @@
 int main()
 {
 
-    std::vector <Zolnierz> armia;
+    std::vector <Szeregowy> armia;
+
 
     for (int i = 0; i < N; i++) {
         armia.push_back(Szeregowy(20+ 20*i, 20));
     }
-
     /*
 
-    Szeregowy ob(20,20);
-    armia.push_back(ob);
-    Szeregowy ob1(20,40);
-    armia.push_back(ob1);
     for (int i =20; i< 100; i+=20)
     {
     }
@@ -66,7 +62,7 @@ int main()
                 break;
 
             case sf::Event::KeyPressed:
-                //std::cout << "Key press event detected\n";
+                std::cout << "Key press event detected\n";
 
                 for( size_t i = 0; i < armia.size(); i++ )
                 {

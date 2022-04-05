@@ -1,4 +1,5 @@
 #include "Szeregowy.h"
+#include <iostream>
 
 Szeregowy::Szeregowy(int x, int y) : Zolnierz("szeregowy_bacznosc.png",x,y)
 {
@@ -19,6 +20,7 @@ void Szeregowy::checkForKeyPressed()
     Zolnierz::checkForKeyPressed();
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::B))
     {
+        std::cout<<"h";
         bron = !bron;
         if(bron)
             Szeregowy::prezentujBron();

@@ -455,3 +455,51 @@
 1649103846 source:c:\users\orange\desktop\zolnierzeprojekt\src\szeregowy.cpp
 	"Szeregowy.h"
 
+1649184541 source:c:\users\orange\desktop\zolnierze-cpp\main.cpp
+	<iostream>
+	<RysowalnyObiekt.h>
+	<Zolnierz.h>
+	<SFML/Graphics.hpp>
+	<SFML/Window/Event.hpp>
+	<vector>
+	<Mapa.h>
+	<Szeregowy.h>
+	<stdlib.h>
+	<time.h>
+	<vector>
+
+1649184138 c:\users\orange\desktop\zolnierze-cpp\include\rysowalnyobiekt.h
+	<SFML/Graphics.hpp>
+	<SFML/Window/Event.hpp>
+
+1649184138 c:\users\orange\desktop\zolnierze-cpp\include\zolnierz.h
+	<RysowalnyObiekt.h>
+
+1649184138 c:\users\orange\desktop\zolnierze-cpp\include\mapa.h
+	<RysowalnyObiekt.h>
+
+1649184138 c:\users\orange\desktop\zolnierze-cpp\include\szeregowy.h
+	<Zolnierz.h>
+
+1649184138 source:c:\users\orange\desktop\zolnierze-cpp\src\mapa.cpp
+	"Mapa.h"
+	<iostream>
+	<Stale.h>
+
+1649184138 c:\users\orange\desktop\zolnierze-cpp\include\stale.h
+
+1649184138 source:c:\users\orange\desktop\zolnierze-cpp\src\rysowalnyobiekt.cpp
+	"RysowalnyObiekt.h"
+	<iostream>
+	<SFML/Window/Event.hpp>
+	<Stale.h>
+
+1649184604 source:c:\users\orange\desktop\zolnierze-cpp\src\szeregowy.cpp
+	"Szeregowy.h"
+	<iostream>
+
+1649184138 source:c:\users\orange\desktop\zolnierze-cpp\src\zolnierz.cpp
+	"Zolnierz.h"
+	<Stale.h>
+	<iostream>
+
