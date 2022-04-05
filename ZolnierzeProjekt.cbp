@@ -41,12 +41,16 @@
 			<Add library="sfml-system" />
 			<Add directory="C:/SFML/SFML-2.5.1/lib" />
 		</Linker>
+		<Unit filename="include/General.h" />
+		<Unit filename="include/Major.h" />
 		<Unit filename="include/Mapa.h" />
 		<Unit filename="include/RysowalnyObiekt.h" />
 		<Unit filename="include/Stale.h" />
 		<Unit filename="include/Szeregowy.h" />
 		<Unit filename="include/Zolnierz.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/General.cpp" />
+		<Unit filename="src/Major.cpp" />
 		<Unit filename="src/Mapa.cpp" />
 		<Unit filename="src/RysowalnyObiekt.cpp" />
 		<Unit filename="src/Szeregowy.cpp" />
